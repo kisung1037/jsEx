@@ -1,0 +1,17 @@
+body {
+    background-color: #d3d3d3;
+}
+.js-clock,
+.js-form,
+.js-greetings {
+    font-size: 25px;
+    color: rgb(115, 115, 194);
+}
+.form,
+.grettings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
