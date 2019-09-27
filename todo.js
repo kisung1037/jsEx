@@ -8,13 +8,19 @@ const toDos = [];
 
 
 function paintToDo(text){
+    const time = new Date();
     const li = document.createElement("li");
     const delBtn = document.createElement('button')
-    delBtn.innerText = "X";
+    const date = document.createElement("span")
     const span = document.createElement("span");
     const newId = toDos.length + 1;
-    span.innerText = text;
+    const min = time.getMinutes(),
+        hour = time.getHours();
+    span.innerText = (text +" ");
+    date.innerText = `${hour}:${min}`;
+    delBtn.innerText ="X";
     li.appendChild(span);
+    li.appendChild(date);
     li.appendChild(delBtn);
     li.id = newId;
     toDoList.appendChild(li);
